@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: white;
+        scroll-behavior: smooth;
+    }
+    header {
+        padding: 20px;
+        text-align: center;
+        background: #1e1e1e;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        animation: fadeInDown 1s ease;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav button {
+        margin: 5px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        background: crimson;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    nav button:hover {
+        transform: scale(1.05);
+    }
+    section {
+        padding: 40px;
+        text-align: center;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: gray;
+        margin: auto;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .card {
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 12px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(255, 49, 49, 0.5);
+        animation: fadeInUp 1s ease;
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    iframe {
+        border: none;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    a.website-link {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        background: crimson;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    a.website-link:hover {
+        transform: scale(1.05);
+    }
+    @keyframes fadeInDown {
+        from {opacity: 0; transform: translateY(-20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <button onclick="document.getElementById('videos').scrollIntoView()">Videos</button>
+        <button onclick="document.getElementById('websites').scrollIntoView()">Websites</button>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="profile-pic" style="background-image: url('PFP.jpeg');"></div>
+    <h2>Services I Offer</h2>
+    <div class="cards">
+        <div class="card">AI Video Creation<br><small>Generating creative and engaging video content using AI tools.</small></div>
+        <div class="card">Custom AI Development<br><small>Building custom tools, chatbots, and systems powered by AI.</small></div>
+        <div class="card">Graphic Design<br><small>Creating modern and clean visuals for brands and projects using Canva.</small></div>
+    </div>
+    <h2>My Projects</h2>
+    <div class="cards">
+        <div class="card">AI-Powered Attendance System<br><small>Face detection + MongoDB attendance automation.</small></div>
+        <div class="card">Personal AI Chatbot<br><small>DeepSeek API-powered interactive chatbot.</small></div>
+        <div class="card">Weather Web Application<br><small>Fetches and displays real-time weather data.</small></div>
+        <div class="card">Image Text Extractor<br><small>Extract and digitize text from images using OCR.</small></div>
+    </div>
+</section>
+
+<section id="videos">
+    <h2>My Videos</h2>
+    <iframe width="300" height="500" src="https://www.youtube.com/embed/M-fYArOsiAw" allowfullscreen></iframe>
+    <iframe width="300" height="500" src="https://www.youtube.com/embed/265R0kw0H98" allowfullscreen></iframe>
+    <iframe width="300" height="500" src="https://www.youtube.com/embed/OtX4tNKbPOA" allowfullscreen></iframe>
+    <iframe width="300" height="500" src="https://www.youtube.com/embed/yWeHY-8CX4k" allowfullscreen></iframe>
+    <iframe width="300" height="500" src="https://www.youtube.com/embed/NjPZFcguDUU" allowfullscreen></iframe>
+</section>
+
+<section id="websites">
+    <h2>My Websites</h2>
+    <a class="website-link" href="https://sajid-razzaq-advocate.vercel.app/" target="_blank">Online Profile</a>
+    <a class="website-link" href="https://ledger-blond.vercel.app/" target="_blank">Ledger</a>
+    <a class="website-link" href="https://car-website-h5dg.vercel.app/" target="_blank">Ecom Store</a>
+    <a class="website-link" href="https://hussbot-chat.vercel.app/" target="_blank">Chat Bot</a>
+</section>
+
+</body>
+</html>
+
+
+
