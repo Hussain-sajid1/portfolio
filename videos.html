@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Videos - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>AI Video Gallery</h1>
+    <nav>
+        <a href="index.html" class="nav-button-header">Home</a>
+        <a href="websites.html" class="nav-button-header">Websites</a>
+    </nav>
+</header>
+
+<div class="page-container">
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul id="category-list">
+            <li><a href="#" class="category-link active" onclick="showCategory('cars')">AI Car Videos</a></li>
+            <li><a href="#" class="category-link" onclick="showCategory('ads')">AI Advertisement</a></li>
+            </ul>
+    </aside>
+
+    <main class="content-area">
+        <div id="cars" class="video-category-content active">
+            <h2>AI Car Videos</h2>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/M-fYArOsiAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/265R0kw0H98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/OtX4tNKbPOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/yWeHY-8CX4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/NjPZFcguDUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="ads" class="video-category-content">
+            <h2>AI Advertisement</h2>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/Dz9EplqFI4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/8wPebDkV1xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/64YhtbrY5gA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:hussainsajid@gmail.com">hussainsajid@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/923085231023" target="_blank">0308 5231023</a></p>
+</footer>
+
+<script>
+    function showCategory(categoryId) {
+        // Prevent the link from navigating away
+        event.preventDefault();
+
+        // Hide all video sections
+        document.querySelectorAll('.video-category-content').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Remove 'active' class from all category links
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Show the selected video section
+        document.getElementById(categoryId).classList.add('active');
+
+        // Add 'active' class to the clicked link
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
