@@ -22,7 +22,10 @@
         <ul id="category-list">
             <li><a href="#" class="category-link active" onclick="showCategory('cars')">AI Car Videos</a></li>
             <li><a href="#" class="category-link" onclick="showCategory('ads')">AI Advertisement</a></li>
-            </ul>
+            <li><a href="#" class="category-link" onclick="showCategory('avatar')">AI Avatar</a></li>
+            <li><a href="#" class="category-link" onclick="showCategory('satisfying')">Satisfying Videos</a></li>
+            <li><a href="#" class="category-link" onclick="showCategory('story')">Story Telling</a></li>
+        </ul>
     </aside>
 
     <main class="content-area">
@@ -45,6 +48,29 @@
                 <iframe src="https://www.youtube.com/embed/64YhtbrY5gA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div id="avatar" class="video-category-content">
+            <h2>AI Avatar</h2>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/2JC_7xhmdkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/lLWeBOky4NY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="satisfying" class="video-category-content">
+            <h2>Satisfying Videos</h2>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/uJRYrSpvUgk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/9gu8dwji7Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="story" class="video-category-content">
+            <h2>Story Telling</h2>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/lyUYfVLguWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -56,23 +82,14 @@
 
 <script>
     function showCategory(categoryId) {
-        // Prevent the link from navigating away
         event.preventDefault();
-
-        // Hide all video sections
         document.querySelectorAll('.video-category-content').forEach(section => {
             section.classList.remove('active');
         });
-
-        // Remove 'active' class from all category links
         document.querySelectorAll('.category-link').forEach(link => {
             link.classList.remove('active');
         });
-
-        // Show the selected video section
         document.getElementById(categoryId).classList.add('active');
-
-        // Add 'active' class to the clicked link
         event.target.classList.add('active');
     }
 </script>
